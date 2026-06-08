@@ -1,0 +1,7 @@
+{
+  "name": "HANutrition",
+  "content_in_root": false,
+  "domains": ["hanutrition"],
+  "homeassistant": "2024.1.0",
+  "render_readme": true
+}

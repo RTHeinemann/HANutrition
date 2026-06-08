@@ -14,7 +14,7 @@ Ein vollständiges Home Assistant Custom Component für Ernährungs-Tracking mit
 ## 📁 Projektstruktur
 
 ```
-ha_nutrition/
+HANutrition/
 ├── docs/
 │   └── integration-guide.md          # Vollständige Anleitung
 ├── custom_components/
