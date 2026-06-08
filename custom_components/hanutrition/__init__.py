@@ -1,10 +1,10 @@
-"""ha_nutrition - Nutrition tracking integration for Home Assistant."""
+"""HANutrition - Nutrition tracking integration for Home Assistant."""
 
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers import config_validation as cv
 
-from .const import DOMAIN, DB_NAME, DB_DIR
+from .const import DOMAIN
 from .database import NutritionDatabase
 from .services import register_services, SERVICE_DESCRIPTORS
 import logging
@@ -17,27 +17,24 @@ PLATFORMS = ["sensor"]
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    """Set up the ha_nutrition component."""
-    db_path = hass.config.path(DOMAIN, DB_NAME)
+    """Set up the HANutrition component."""
     db_dir = hass.config.path(DOMAIN)
+    db_path = hass.config.path(f"{DOMAIN}/hanutrition.db")
     
     db = NutritionDatabase(db_path, db_dir)
     db.initialize()
     
     hass.data.setdefault(DOMAIN, {})["database"] = db
     
-    # Register services
     register_services(hass)
     hass.data.setdefault(DOMAIN, {})["services_registered"] = True
-    
-    # Store service descriptors for UI
     hass.data.setdefault(DOMAIN, {})["service_descriptors"] = SERVICE_DESCRIPTORS
     
     return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up ha_nutrition from a config entry."""
+    """Set up HANutrition from a config entry."""
     await async_setup(hass, {})
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True

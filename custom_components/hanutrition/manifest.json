@@ -1,0 +1,14 @@
+{
+    "domain": "hanutrition",
+    "name": "HANutrition",
+    "codeowners": [],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/RTHeinemann/HANutrition",
+    "integration_type": "hub",
+    "iot_class": "local_polling",
+    "issue_tracker": "https://github.com/RTHeinemann/HANutrition/issues",
+    "loggers": ["hanutrition"],
+    "requirements": [],
+    "version": "0.1.0"
+}
