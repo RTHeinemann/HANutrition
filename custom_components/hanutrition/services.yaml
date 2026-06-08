@@ -1,0 +1,144 @@
+log_meal:
+  name: Log meal
+  description: Loggt eine Mahlzeit mit Nährwerten.
+  fields:
+    meal_type:
+      name: Mahlzeittyp
+      description: Typ der Mahlzeit.
+      required: true
+      selector:
+        select:
+          options:
+            - breakfast
+            - lunch
+            - dinner
+            - snack
+    food_name:
+      name: Lebensmittel
+      description: Name des Lebensmittels.
+      example: Haferflocken
+      selector:
+        text:
+    calories:
+      name: Kalorien
+      description: Kalorienmenge.
+      default: 0
+      selector:
+        number:
+          min: 0
+          mode: box
+    protein:
+      name: Protein
+      description: Protein in Gramm.
+      default: 0
+      selector:
+        number:
+          min: 0
+          mode: box
+    carbs:
+      name: Kohlenhydrate
+      description: Kohlenhydrate in Gramm.
+      default: 0
+      selector:
+        number:
+          min: 0
+          mode: box
+    fat:
+      name: Fett
+      description: Fett in Gramm.
+      default: 0
+      selector:
+        number:
+          min: 0
+          mode: box
+    serving_g:
+      name: Portionsgröße (g)
+      description: Portionsgröße in Gramm.
+      default: 100
+      selector:
+        number:
+          min: 0
+          mode: box
+    quantity:
+      name: Menge
+      description: Anzahl Portionen.
+      default: 1
+      selector:
+        number:
+          min: 0
+          mode: box
+    notes:
+      name: Notizen
+      description: Optionaler Kommentar.
+      selector:
+        text:
+
+add_food:
+  name: Add food
+  description: Fügt ein Lebensmittel zur Datenbank hinzu.
+  fields:
+    food_name:
+      name: Lebensmittel
+      description: Name des Lebensmittels.
+      required: true
+      selector:
+        text:
+    calories:
+      name: Kalorien
+      description: Kalorien pro Portion.
+      required: true
+      selector:
+        number:
+          min: 0
+          mode: box
+    protein:
+      name: Protein
+      description: Protein in Gramm.
+      required: true
+      selector:
+        number:
+          min: 0
+          mode: box
+    carbs:
+      name: Kohlenhydrate
+      description: Kohlenhydrate in Gramm.
+      required: true
+      selector:
+        number:
+          min: 0
+          mode: box
+    fat:
+      name: Fett
+      description: Fett in Gramm.
+      required: true
+      selector:
+        number:
+          min: 0
+          mode: box
+    serving_g:
+      name: Portionsgröße (g)
+      description: Portionsgröße in Gramm.
+      default: 100
+      selector:
+        number:
+          min: 0
+          mode: box
+
+log_quick:
+  name: Quick log
+  description: Schnelles Logging mit vorhandenem Lebensmitteleintrag.
+  fields:
+    food_name:
+      name: Lebensmittel
+      description: Name des Lebensmittels.
+      required: true
+      selector:
+        text:
+    quantity:
+      name: Menge
+      description: Anzahl Portionen.
+      default: 1
+      selector:
+        number:
+          min: 0
+          mode: box
