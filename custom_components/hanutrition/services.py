@@ -83,9 +83,9 @@ def register_services(hass: HomeAssistant) -> None:
     _add_food_service = lambda call: _handle_add_food(hass, call)
     _log_quick_service = lambda call: _handle_log_quick(hass, call)
     
-    hass.services.register(DOMAIN, "log_meal", _log_meal_service, SERVICE_LOG_MEAL_SCHEMA)
-    hass.services.register(DOMAIN, "add_food", _add_food_service, SERVICE_ADD_FOOD_SCHEMA)
-    hass.services.register(DOMAIN, "log_quick", _log_quick_service, SERVICE_LOG_QUICK_SCHEMA)
+    hass.services.async_register(DOMAIN, "log_meal", _log_meal_service, SERVICE_LOG_MEAL_SCHEMA)
+    hass.services.async_register(DOMAIN, "add_food", _add_food_service, SERVICE_ADD_FOOD_SCHEMA)
+    hass.services.async_register(DOMAIN, "log_quick", _log_quick_service, SERVICE_LOG_QUICK_SCHEMA)
     
     hass.data[DOMAIN]["services_registered"] = True
 
