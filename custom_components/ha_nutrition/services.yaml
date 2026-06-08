@@ -1,0 +1,85 @@
+# Service descriptions for ha_nutrition
+log_meal:
+  name: Mahlzeit erfassen
+  description: Erfasse eine Mahlzeit mit Makronährstoffen
+  fields:
+    meal_type:
+      name: Mahlzeit-Typ
+      description: Art der Mahlzeit
+      example: frühstück
+    food_name:
+      name: Essensname
+      description: Name des Gerichts
+      example: Hähnchenbrust
+    calories:
+      name: Kalorien
+      description: Kalorien in kcal
+      example: "165"
+    protein:
+      name: Protein
+      description: Protein in Gramm
+      example: "31"
+    carbs:
+      name: Kohlenhydrate
+      description: Kohlenhydrate in Gramm
+      example: "0"
+    fat:
+      name: Fett
+      description: Fett in Gramm
+      example: "3.6"
+    notes:
+      name: Notizen
+      description: Optionale Notizen
+      example: mit Gewürzen
+
+add_food:
+  name: Lebensmittel hinzufügen
+  description: Füge ein neues Lebensmittel zur Datenbank hinzu
+  fields:
+    name:
+      name: Name
+      description: Name des Lebensmittels
+      example: Kichererbsen
+    calories:
+      name: Kalorien
+      description: Kalorien pro 100g
+      example: "164"
+    protein:
+      name: Protein
+      description: Protein pro 100g
+      example: "8.9"
+    carbs:
+      name: Kohlenhydrate
+      description: Kohlenhydrate pro 100g
+      example: "27"
+    fat:
+      name: Fett
+      description: Fett pro 100g
+      example: "2.6"
+
+search_food:
+  name: Lebensmittel suchen
+  description: Suche in der Lebensmitteldatenbank
+  fields:
+    query:
+      name: Suchbegriff
+      description: Suchbegriff
+      example: Reis
+
+add_user:
+  name: Benutzer hinzufügen
+  description: Füge einen neuen Benutzer hinzu
+  fields:
+    name:
+      name: Name
+      description: Name des Benutzers
+      example: Lucas
+
+set_active_user:
+  name: Aktiven Benutzer setzen
+  description: Setzt den aktiven Benutzer
+  fields:
+    user_id:
+      name: Benutzer-ID
+      description: ID des Benutzers
+      example: default

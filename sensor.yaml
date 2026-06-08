@@ -1,0 +1,17 @@
+# ha_nutrition sensors
+# Die Entities werden automatisch durch die Integration erstellt.
+# Manuelle Konfiguration hier ist NICHT erforderlich!
+
+# Falls du Entities trotzdem manuell definieren willst:
+# - sensor.nutrition_daily_calories
+# - sensor.nutrition_daily_protein
+# - sensor.nutrition_daily_carbs
+# - sensor.nutrition_daily_fat
+# - sensor.nutrition_daily_goal_progress
+# - sensor.nutrition_daily_protein_pct
+# - sensor.nutrition_daily_carbs_pct
+# - sensor.nutrition_daily_fat_pct
+# - sensor.nutrition_weekly_avg_calories
+# - sensor.nutrition_weekly_avg_protein
+# - sensor.nutrition_daily_meal_count
+# - sensor.nutrition_last_meal_time
