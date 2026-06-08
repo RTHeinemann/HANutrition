@@ -229,6 +229,6 @@ class NutritionSensor(SensorEntity, RestoreEntity):
     async def async_added_to_hass(self) -> None:
         """Restore state when restarted."""
         await super().async_added_to_hass()
-        state = await self.async_get_last_sensor_data()
-        if state:
-            self._attr_native_value = state.native_value
+        state = await self.async_get_last_state()
+        if state and state.state not in ("unknown", "unavailable"):
+            self._attr_native_value = state.state
