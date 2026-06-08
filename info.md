@@ -1,4 +1,4 @@
-# Ha Nutrition 🍎
+# HANutrition 🍎
 
 Track your nutrition in Home Assistant!
 
@@ -18,25 +18,25 @@ Track your nutrition in Home Assistant!
 1. Open HACS in Home Assistant
 2. Click "Integrations"
 3. Click "Explore & Add Repositories"
-4. Search for "Ha Nutrition"
+4. Add `https://github.com/RTHeinemann/HANutrition` as custom repository (category: Integration)
 5. Click "Download"
 6. Restart Home Assistant
 7. Go to Settings → Devices & Services → Add Integration
-8. Search for "Ha Nutrition" and configure
+8. Search for "HANutrition" and configure
 
 ### Manual Installation
 
-1. Copy the `custom_components/ha_nutrition` folder to your Home Assistant `custom_components` directory
+1. Copy the `custom_components/hanutrition` folder to your Home Assistant `custom_components` directory
 2. Restart Home Assistant
 3. Go to Settings → Devices & Services → Add Integration
-4. Search for "Ha Nutrition" and configure
+4. Search for "HANutrition" and configure
 
 ## Usage
 
 ### Log a Meal
 
 ```yaml
-service: ha_nutrition.log_meal
+service: hanutrition.log_meal
 data:
   meal_type: breakfast
   food_name: Hähnchenbrust mit Reis
@@ -49,7 +49,7 @@ data:
 ### Add a Food
 
 ```yaml
-service: ha_nutrition.add_food
+service: hanutrition.add_food
 data:
   name: Kichererbsen
   calories: 164
